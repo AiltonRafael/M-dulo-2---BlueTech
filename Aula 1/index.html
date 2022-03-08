@@ -1,0 +1,129 @@
+<!DOCTYPE html> <!-- DOCTYPE informa o tipo/extensão de arquivo do nosso VS -->
+<html lang="pt-br"> <!-- HTML língua (informa o motor do navegador a lingua que deve ser lida) -->
+<head> <!-- HEAD configura o HTML -->
+    <meta charset="UTF-8"> <!-- META - informa e configura informação da nosso HTML -->
+    <!-- charset indica o tipo de letra que vai lido (caractere) - UTF-8 (a-z / A-Z e com todos os acentos)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compabilidade da nossa página para Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nossa aplicação vai ser suportada por todos os dispositivos (smartphones, tablets e etc) -->
+    <title> Minha Primeira Página HTML </title> <!-- dá o nome da nossa pagina-->
+</head> 
+<body> 
+    <!-- Tags de Efeito -->
+    <div>
+        <!-- Tags de Cabeçalho (<h1>, <h2> ... <h6>) são tags para títulos -->
+            <h1> Tags de Cabeçalho </h1>
+            <div> 
+                <h1> Olá, mundo </h1>
+                <h2> Olá, mundo </h2>
+                <h3> Olá, mundo </h3>
+                <h4> Olá, mundo </h4>
+                <h5> Olá, mundo </h5>
+                <h6> Olá, mundo </h6>
+            </div>
+            <hr />
+
+        <!-- Tags de Quebras (<p>, <br>, <hr />) -->
+        <div>
+            <h1> Tags de Quebras </h1>
+            <p> Parágrafo 1 </p> <!-- <p> parágrafo a distância do paragráfo vai ser igual ao tamanho font, imagem....-->
+            <p> Parágrafo 2 </p>
+            Olá, mundo <br> <!-- <br> quebra de linha -->
+            Olá, mundo <br>
+            Olá, mundo <hr /> <!-- <hr /> delimitador - coloca uma linha contínua-->
+        </div>
+
+        <!-- Tags de Estilização -->
+        <div> 
+            <h1> Tags de Estilização </h1>
+            <b> Tag de Negrito </b> <br> <!-- <b> "bold" - negrito -->
+            <strong> Tag de Realce </strong> <br> <!-- <strong> "forte" tag de realce - cada navegador irá exibir diferentemente o strong-->
+            <i> Tag de Itálico </i> <br>
+            <b>
+                <i>
+                    Negrito e Itálico
+                </i>
+            </b> <br>
+            <u> Tag de Sublinhar </u> <br> <!-- <u> "underline" - sublinha o texto-->
+            <s> Tag de Corte </s> <!-- <s> "slice" - cortar o texto no meio -->
+            <hr />
+        </div>
+
+        <!-- Tag de Input (entrada)-->
+        <div>
+            <h1> Tags de Input </h1> 
+            <input> Digite seu nome <br> <!-- Tag de INPUT não precisa de fechamento - input sozinho é do tipo texto -->
+            <input type="color"> <br>
+            <input type="date"> <br>
+            <input type="checkbox"> <br>
+            <input type="checkbox"> <br>
+            <input type="checkbox"> <br>
+            <input type="checkbox"> <br>
+            
+            <input 
+            type="password" 
+            placeholder="Digite uma senha com 8 caracteres"
+            name="senha-input"
+            > 
+            <label for="senha-input"> Password </label>
+            <br>
+
+
+            <input 
+            type="email" 
+            placeholder="Digite um e-mail"
+            name="email-input"
+            >
+            <label for="email-input"> E-mail </label>
+            <br>
+
+            <input type="month">
+            <hr />
+        </div>
+
+        <!-- Tags de Mídia -->
+        <h1> Tags de Mídia </h1>
+        <h2> Imagem </h2>
+        <div>
+            <img 
+            alt="Cachorro fofo"
+            src="./assets/img/puppy-img.jpg"
+            width="300px"
+            > <!-- source = fonte-->
+
+            <h2> Video </h2>
+            <video
+            src="./assets/audio/puppy.mp4"
+            controls
+            type="video/mp4"
+            width="200px"
+            > 
+                Este navegador não suporte este tipo de vídeo
+            </video>
+
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/1HygThMLzGs" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+
+            <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
+
+            <h2> Audio </h2>
+            <audio
+            src="./assets/audio/puppy.mp4"
+            controls
+            type="audio/mp3"
+            >
+                Este navegador não suporte este tipo de áudio 
+            </audio>
+        </div>
+
+    </div>
+    <!-- Próxima aula: Tags Semânticas, Span e Div / CSS / JS / Inicializar clone Mercado Livre -->
+    <!-- Tags de tabela (caso dê tempo)-->
+</body>
+</html>
