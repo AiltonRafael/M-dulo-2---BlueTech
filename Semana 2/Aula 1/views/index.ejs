@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
 </head>
 
 <body>
-    <div id="modal"> <%= mensagem %>  </div>
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
     <nav>
-        <a href="/sobre" target="_blank"> Sobre </a>
         <img src="/img/logo-blue.gif" class="img-fluid gif" alt="Animação Logo Blue">
         <ul>
             <li>
@@ -50,11 +54,11 @@
                 <h3>Desenvolvimento de Software</h3>
 
                 <ul>
-                   <% cursos.forEach(element => { %>
-                        <li style="color: red"> <%= element %> </li>
+                   <% devList.forEach((element) => { %>
+                      <li> <%= element %> </li>
                    <% }) %>
                 </ul>
-                
+
                 <h3>Analytics</h3>
                 <ul>
                     <li>Engenharia de dados</li>
@@ -69,7 +73,7 @@
     <section id="inscrever">
         <h2>Inscreva-se!</h2>
 
-        <form action="/" method="post">
+        <form action="/subscription" method="post">
             <div>
                 <label for="nome">Nome: </label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
@@ -89,6 +93,7 @@
             < The future is blue /> <a href="https://blueedtech.com.br/" target="_blank"> BlueEdtech</a>
         </p>
     </footer>
+    <script src="/js/index.js"> </script>
 </body>
 
 </html>

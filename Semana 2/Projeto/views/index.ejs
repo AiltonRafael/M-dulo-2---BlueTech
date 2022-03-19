@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pokedex </title>
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+</head>
+<body>
+    <nav> 
+        <ul> 
+            <a href="/"> <li> Index </li> </a>
+        </ul>
+    </nav>
+    <main>
+        <% pokedex.forEach(element => { %>
+            <a href="/detalhes/<%= element.id %> "> 
+                <div class="card-container"> 
+                    <div class="header-card">
+                        <span class="card-id"> <%= element.id %>  </span>
+                        <span class="card-number"> <%= element.num %>  </span>
+                    </div>
+                    <div class="main-card"> 
+                        <img src="<%= element.img %> " alt="<%= element.name %> ">
+                        <div class="card-name"> <%= element.name %>  </div>
+                        <div class="data-card"> 
+                            <span class="width"> <%= element.weight %>  </span>  
+                            <span class="height"> <%= element.height %>  </span>
+                        </div>
+                    </div>
+                    <div class="footer-card"> <%= element.type %>  </div>
+                </div>
+        </a>
+        <% }) %>
+    </main>
+</body>
+</html>
