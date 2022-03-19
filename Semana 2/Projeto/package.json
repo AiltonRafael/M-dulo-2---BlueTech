@@ -1,0 +1,28 @@
+{
+  "name": "pokemon",
+  "version": "0.0.0",
+  "description": "Projeto da BlueTech - Semana 2",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiltonRafael/Projeto-Pokemon-BlueTech.git"
+  },
+  "author": "Ailton Rafael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AiltonRafael/Projeto-Pokemon-BlueTech/issues"
+  },
+  "homepage": "https://github.com/AiltonRafael/Projeto-Pokemon-BlueTech#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
