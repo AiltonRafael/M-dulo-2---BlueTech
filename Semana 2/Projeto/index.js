@@ -4115,5 +4115,4 @@ app.get('/detalhes/:id', (req, res) => {
     res.render('detalhes.ejs', {
         pokemonAtual
     })
-    console.log(req.params.id)
 })

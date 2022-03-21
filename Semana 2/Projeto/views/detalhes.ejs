@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/detalhes.css" type="text/css">
 </head>
 <body>
+    <%- include('./partials/header.ejs') %> 
+    <%- include('./partials/nav.ejs') %> 
     <main>
         <% pokemonAtual.forEach(element => { %>
                 <div class="card-container"> 
@@ -27,9 +29,13 @@
                         <%= element.candy %> 
                     </div>
                     <div>
-                        <%= element.weaknesses %> 
+                        <% element.weaknesses.forEach(weaknesses => { %>
+                            <%= weaknesses %>
+                        <% }) %>
                     </div>
-                    <div class="footer-card"> <%= element.type %>  </div>
+                    <div class="footer-card"> <% element.type.forEach(type => { %>
+                            <%= type %>
+                    <% }) %>  </div>
                 </div>
         <% }) %>
     </main>

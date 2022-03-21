@@ -7,12 +7,9 @@
     <title> Pokedex </title>
     <link rel="stylesheet" href="./css/index.css" type="text/css">
 </head>
+<%- include('./partials/header.ejs') %> 
+<%- include('./partials/nav.ejs') %> 
 <body>
-    <nav> 
-        <ul> 
-            <a href="/"> <li> Index </li> </a>
-        </ul>
-    </nav>
     <main>
         <% pokedex.forEach(element => { %>
             <a href="/detalhes/<%= element.id %> "> 
@@ -29,7 +26,9 @@
                             <span class="height"> <%= element.height %>  </span>
                         </div>
                     </div>
-                    <div class="footer-card"> <%= element.type %>  </div>
+                    <div class="footer-card"> <% element.type.forEach(type => { %>
+                            <%= type %> 
+                    <% }) %>  </div>
                 </div>
         </a>
         <% }) %>
