@@ -1,0 +1,169 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Digital";
+  src: url("../fonts/Merchant Copy Doublesize.ttf");
+}
+
+:root {
+  --bg-color-main: #000;
+  --text-color-main: #fff;
+  --nav-color-main: #0E0E0E;
+  --bg-color-input: #272727;
+}
+
+.dark_mode {
+  --bg-color-main: #fff;
+  --text-color-main: #000;
+}
+
+body {
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+  font-family: "Digital";
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text-color-main);
+}
+
+header {
+  background-color: var(--nav-color-main);
+  font-size: 0.8rem;
+}
+
+header div {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header div ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+header div input {
+  background-color: var(--bg-color-input);
+  color: var(--text-color-main);
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+}
+
+header li:hover {
+  color: #67AC6B;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+main .card-container {
+  margin: 1rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  max-height: 300px;
+  font-size: 0.8rem;
+}
+
+main .card-container:hover {
+  transform: scale(1.1);
+}
+
+main .card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+main .card-image img {
+  width: 80%;
+}
+
+main .card-title {
+  display: flex;
+  justify-content: center;
+  color: #67AC6B;
+}
+
+main .btn-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+main .btn-container img {
+  width: 0.6rem;
+}
+
+main .btn-container .delete-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main .btn-container .edit-icon {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+main .btn-container img:hover {
+  transform: scale(2);
+}
+
+div.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, 0);
+  height: 150px;
+  background-color: white;
+  z-index: 1;
+}
+
+div.modal div.modal-header {
+  background-color: #222222;
+  width: 100%;
+  padding: 0, 5rem;
+  text-align: center;
+}
+
+div.modal div.modal-title {
+  color: #000;
+}
+
+div.modal div.modal-footer {
+  display: flex;
+  width: 100%;
+  gap: 0.1rem;
+}
+
+div.modal div.modal-footer button {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

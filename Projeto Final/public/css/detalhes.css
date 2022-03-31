@@ -1,0 +1,93 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/Merchant Copy Doublesize.ttf');
+}
+
+body {
+  font-family: 'Digital';
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+
+:root {
+  --bg-color-main: #000;
+  --text-color-main: #fff;
+  --nav-color-main: #0E0E0E;
+  --bg-color-input: #272727 ;
+}
+
+.dark_mode {
+  --bg-color-main: #fff;
+  --text-color-main: #000 ;
+}
+
+body {
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-main);
+}
+
+header {
+  background-color: var(--nav-color-main);
+}
+header div {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header div ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+header div input {
+  background-color: var(--bg-color-input);
+  color: var(--text-color-main);
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+}
+
+header li:hover {
+  color: #67AC6B;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+main .card-image img {
+  width: 100%;
+}
+main table {
+  text-align: center;
+  font-size: 0.7rem;
+}
+main table td, main table thead > tr > th {
+  border: 1px solid white;
+}
+main table tr:nth-child(even) {
+  background-color: #67AC6B;
+}
+main h1 {
+  color: white;
+  font-size: 0.8rem;
+  -webkit-text-stroke-width: 0.04px;
+  -webkit-text-stroke-color: #fff;
+}
+
+/*# sourceMappingURL=detalhes.css.map */

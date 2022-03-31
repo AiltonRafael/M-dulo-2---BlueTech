@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detalhes.css" type="text/css">
+    <title>Filmes</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <h1> <%= filme.nome %> </h1>
+        <iframe <%= filme.iframe %>>  </iframe>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Ficha Técnica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <tr>
+                        <td>Titulo</td>
+                        <td> <%= filme.nome %>  </td>
+                    </tr>
+                    <tr>
+                        <td> Ano de Produção </td>
+                        <td> <%= filme.ano %>  </td>
+                    </tr>
+                    <tr>
+                        <td> Dirigido por </td>
+                        <td> <%= filme.diretores %>  </td>
+                    </tr>
+                    <tr>
+                        <td> Dirigido por </td>
+                        <td> <%= filme.duracao %>  </td>
+                    </tr>
+                </tr>
+            </tbody>
+        </table>
+        
+    </main>
+</body>
+</html>
