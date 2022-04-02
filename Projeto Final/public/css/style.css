@@ -1,3 +1,16 @@
+:root {
+  --bg-color-main: #000;
+  --text-color-main: #fff;
+  --nav-color-main: #03A062;
+  --bg-color-input: #272727;
+}
+
+.dark_mode {
+  --bg-color-main: #fff;
+  --text-color-main: #000;
+}
+/* -------------- Configurações gerais ------------ */
+
 * {
   border: 0;
   margin: 0;
@@ -6,18 +19,6 @@
 @font-face {
   font-family: "Digital";
   src: url("../fonts/Merchant Copy Doublesize.ttf");
-}
-
-:root {
-  --bg-color-main: #000;
-  --text-color-main: #fff;
-  --nav-color-main: #0E0E0E;
-  --bg-color-input: #272727;
-}
-
-.dark_mode {
-  --bg-color-main: #fff;
-  --text-color-main: #000;
 }
 
 body {
@@ -33,6 +34,8 @@ a {
   text-decoration: none;
   color: var(--text-color-main);
 }
+
+/* -------------- Header ------------ */
 
 header {
   background-color: var(--nav-color-main);
@@ -64,6 +67,12 @@ header li:hover {
   color: #67AC6B;
 }
 
+/* -------------------------- */
+/* ----------Index----------- */
+/* -------------------------- */
+
+/* -------------- Main ------------ */
+
 main {
   display: flex;
   justify-content: center;
@@ -71,6 +80,8 @@ main {
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
+/***** Main - Card *****/
 
 main .card-container {
   margin: 1rem;
@@ -87,6 +98,8 @@ main .card-container {
 main .card-container:hover {
   transform: scale(1.1);
 }
+
+/***** Main - Imagem *****/
 
 main .card-image {
   display: flex;
@@ -166,4 +179,31 @@ div.modal div.modal-footer button {
   width: 100%;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* ---- Formulário ------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+}
+
+legend {
+    background-color: #03A062;
+    text-align: center;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+  background-color: #03A062;
+  color: white;
+}
+
+button:hover {
+  background-color: #04623c;
+  color: #fff;
+  cursor: pointer;
+}

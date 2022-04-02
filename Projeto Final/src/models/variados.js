@@ -25,6 +25,10 @@ export const variados = connection.define("variados", {
         type: Sequelize.STRING,
         allowNull: false
     },
+    descricao: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     iframe: {
         type: Sequelize.STRING,
         allowNull: true
