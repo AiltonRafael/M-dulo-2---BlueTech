@@ -1,4 +1,5 @@
 import { variados } from '../models/variados.js'
+import { Sequelize } from 'sequelize'
 
 export const getIndex = async (req, res) => {
     try {
@@ -86,5 +87,23 @@ export const postEditar = async (req, res) => {
 
     catch(err) {
         res.status(500).send(err.message)
+    }
+}
+
+export const getProcurar = async (req, res) => {
+    try {
+        let pesquisar = res.body
+        const filmes = await variados.findAll({
+            where: {
+                nome: {
+                    [Sequelize.Op.iLike]: `%${pesquisar}%`
+                }
+            }
+        })
+        res.status(200).render('procurar.ejs', {
+            pesquisar
+        })
+    } catch(err){
+        res.status(500).send({err: err.message})
     }
 }

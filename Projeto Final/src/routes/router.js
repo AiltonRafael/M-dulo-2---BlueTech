@@ -5,7 +5,8 @@ import { getIndex,
     getCriar,
     postCriar,
     getEditar,
-    postEditar
+    postEditar,
+    getProcurar
 } from '../controllers/FilmesController.js'
 
 export const routes = express.Router()
@@ -19,4 +20,6 @@ routes.post('/criar', postCriar)
 
 routes.get('/editar/:id', getEditar)
 routes.post('/editar/:id', postEditar)
+
+routes.post('/pesquisar', getProcurar)
  

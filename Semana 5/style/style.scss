@@ -1,0 +1,56 @@
+/* Reset */ 
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* General Settings */
+
+@mixin generalConfig {
+    background-color: aqua;
+    color: #000;
+    margin: 16px;
+    padding: 16rem;    
+}
+
+@mixin config {
+    background-color: aqua;
+    color: #000;
+    margin: 16px;
+    padding: 16rem;    
+}
+/* General pallets colors  */ 
+
+$main-color: #f00fff;
+$secundary-color: #0000FF;
+$color-text: #000;
+
+/* Main contents  */ 
+
+body {
+    @include generalConfig
+ }
+
+
+main {
+    color: aqua;
+    border: 1px solid red;
+    background-color: $main-color;
+
+    .card {
+        background-color: red;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+aside {
+    .card {
+        background-color: $secundary-color;
+    }
+}
